@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love Pens</title>
+</head>
+<body>
+    <div class = "container">
+        <div>
+            <h1 class="header_text">Hi, Love! I love you so much</h1>
+            <h1 class="header_text">Do you love me??</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://www.icegif.com/wp-content/uploads/da-bears-icegif-18.gif">
+        </div>
+        <div class = "buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+                function nextPage()
+                {
+                    window.location.href = "yes.html";
+                }
+
+                function moveButton()
+                {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
